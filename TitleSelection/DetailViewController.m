@@ -19,6 +19,18 @@
     
     [super viewDidLoad];
     
+    
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor yellowColor]};
+    
+//    navLabel.text = @"Movies";
+//    navLabel.textColor = [UIColor whiteColor];
+//     UILabel *navLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+//    self.navigationItem.titleView = navLabel;
+   
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    
     [self isFirstResponder];
     
     [self reloadInputViews];

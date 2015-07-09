@@ -33,6 +33,14 @@
     [super viewDidLoad];
     
     // Table View Size Created
+    
+    
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]]; // Sets Entire Bar
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    
     self.dataSource = [DataSource new];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
@@ -52,7 +60,7 @@
     detailViewController.titleString = [self.dataSource titleAtIndexPath:indexPath];
     [self.navigationController pushViewController:detailViewController animated:YES];
     
-    self.title = @"Titles";
+    self.title = @"Movies";
     
 
 
@@ -72,12 +80,7 @@
 //                                    [UIFont fontWithName:@"Arial-Bold" size:15],
 
     
-   [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; //Did Not.. check After done.
-    
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
-    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
-    [self.navigationController.navigationBar setTranslucent:NO];
+   
 
 
 
