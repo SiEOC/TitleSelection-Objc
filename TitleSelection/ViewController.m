@@ -32,10 +32,10 @@
     
     // Q: Movies appear after detail view...,
     
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Left Side" style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Escape" style:UIBarButtonItemStylePlain target:self action:nil];
     [self.navigationItem setLeftBarButtonItem:leftItem animated:YES];
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Right Side" style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Find More" style:UIBarButtonItemStylePlain target:self action:nil];
     [self.navigationItem setRightBarButtonItem:rightItem animated:YES];
     
     
@@ -43,7 +43,13 @@
     self.navigationController.navigationBar.tintColor = [UIColor redColor]; // Seen but Not Title
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]]; // Seen on only ViewController
     [self.navigationController.navigationBar setTranslucent:NO]; // Need this to apply colors
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor], NSForegroundColorAttributeName,nil]];
+    
     self.title = @"Movies";
+    
+   
+    
 }
 
 - (void)viewDidLoad {
@@ -57,6 +63,7 @@
     //Delegate & Data Source
     self.tableView.delegate = (self);
     self.tableView.dataSource = self.dataSource;
+    self.tableView.backgroundColor = [UIColor purpleColor];  //Changes Space Between NavBar and TableView
     
     // Add To View
     [self.view addSubview:self.tableView];

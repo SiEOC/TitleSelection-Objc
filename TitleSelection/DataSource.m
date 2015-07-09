@@ -15,15 +15,15 @@
     return [self titles].count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell)
     {
         
-
         cell = [UITableViewCell new];
         
-        if ( indexPath > 0 ) // Adjust to New..  Do ()
+        if (indexPath.row % 4) // Adjust to New..  Do ()
         {
             cell.backgroundColor = [UIColor redColor];
             cell.textLabel.textColor = [UIColor whiteColor];
@@ -31,7 +31,7 @@
         }
         else
         {
-            cell.backgroundColor = [UIColor greenColor];
+            cell.backgroundColor = [UIColor grayColor];
             cell.textLabel.textColor = [UIColor redColor];
   
         }
