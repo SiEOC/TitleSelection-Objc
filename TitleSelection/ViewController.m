@@ -84,27 +84,10 @@
 }
 
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return YES if you want the specified item to be editable.
-    return YES;
-}
 
 
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        //add code here for when you hit delete
-    }
-}
+// Want To Select Many To Delete
 
-
-- (void)delete:(id)sender  //(id)sender is the object which sent the message to that selector.
-{
-//    self.tableView deleteRowsAtIndexPaths: withRowAnimation:nil;
-}
-
-     
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
         self.tableView.allowsMultipleSelectionDuringEditing = editing;

@@ -11,8 +11,6 @@
 @interface ViewController : UIViewController <UICollectionViewDelegate>
 
 
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated;
 
-- (void)delete:(id)sender;
 
 @end
