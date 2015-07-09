@@ -54,9 +54,33 @@
     
     self.title = @"Titles";
     
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
 
-    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+
+    
+    
+//    [[UINavigationBar appearance] setTitleTextAttributes:
+//     [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor],
+//    
+//      NSForegroundColorAttributeName,
+//      [UIColor purpleColor],
+////      
+//                                NSForegroundColorAttributeName,
+//                                [NSValue valueWithUIOffset:UIOffsetMake(0, -1)],
+//      
+//      
+//                                    NSForegroundColorAttributeName,
+//                                    [UIFont fontWithName:@"Arial-Bold" size:15],
+
+    
+   [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; //Did Not.. check After done.
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+
+
+
    
 
 

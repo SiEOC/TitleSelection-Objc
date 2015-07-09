@@ -23,9 +23,13 @@
     
     [self reloadInputViews];
     
+    self.view.backgroundColor = [UIColor grayColor];
+    
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:@"Here"  delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     
     [alert show];
+  
     
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 200, 300, 100)];
