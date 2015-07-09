@@ -6,20 +6,38 @@
 //  Copyright (c) 2014 DevMountain. All rights reserved.
 //
 
-#import "TitleTableViewDataSource.h"
+#import "DataSource.h"
 
-@implementation TitleTableViewDataSource
+@implementation DataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return [self titles].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
+    if (!cell)
+    {
+
         cell = [UITableViewCell new];
+        
+        if ( indexPath > 0 ) // Adjust to New..  Do ()
+        {
+            cell.backgroundColor = [UIColor redColor];
+            cell.textLabel.textColor = [UIColor whiteColor];
+
+        }
+        else
+        {
+            cell.backgroundColor = [UIColor greenColor];
+            cell.textLabel.textColor = [UIColor redColor];
+  
+        }
+    
     }
-    cell.textLabel.text = [self titles][indexPath.row];
+     cell.textLabel.text = [self titles][indexPath.row]; //Important
+    
     return cell;
 }
 

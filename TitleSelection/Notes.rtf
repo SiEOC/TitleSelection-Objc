@@ -9,33 +9,24 @@
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \deftab720
-\pard\pardeftab720
-
-\f0\b\fs48 \cf2 \expnd0\expndtw0\kerning0
-Step 1: Fork and clone the code base\
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls1\ilvl0
-\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-This project contains a working tableview and datasource.\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Make sure you understand all of the code behind it.\
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+\
 \pard\pardeftab720
 
 \b\fs48 \cf3 \expnd0\expndtw0\kerning0
 \
 \pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-Step 2: Add Delegate methods\
+
+\b0 \cf0 \kerning1\expnd0\expndtw0 \strike \strikec0 Step 2: Add Delegate methods\
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls2\ilvl0
-\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Set as adopted in the implementation file of TitleSelectorViewController\
-\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Remember to add self as the delegate of the tableview\
-\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Add the didSelectRowAtIndexPath method to the implementation file of TitleSelectorViewController\
-\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-In the didSelectRowAtIndexPath method change the title of the view controller to the text of the selected row. (you can get that information from self.datasource)\
+\fs32 \cf0 \strikec0 {\listtext	\'95	}Set as adopted in the implementation file of TitleSelectorViewController\
+{\listtext	\'95	}Remember to add self as the delegate of the tableview\
+{\listtext	\'95	}Add the didSelectRowAtIndexPath method to the implementation file of TitleSelectorViewController\
+{\listtext	\'95	}In the didSelectRowAtIndexPath method change the title of the view controller to the text of the selected row. (you can get that information from self.datasource)\cf2 \expnd0\expndtw0\kerning0
+\strike0\striked0 \
 \pard\pardeftab720
 
 \b\fs48 \cf3 \expnd0\expndtw0\kerning0
@@ -45,12 +36,11 @@ In the didSelectRowAtIndexPath method change the title of the view controller to
 Step 3: Add DetailViewController\
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls3\ilvl0
-\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Create a new UIViewController called TitleDetailViewController\
-\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Remove the title change in the didSelectRow method\
-\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Instantiate and push a detailViewController\
+\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\cf0 \strike \strikec0 \'95	}Create a new UIViewController called TitleDetailViewController\cf2 \expnd0\expndtw0\kerning0
+\strike0\striked0 \
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \strike \strikec0 {\listtext	\'95	}Remove the title change in the didSelectRow method\
+{\listtext	\'95	}Instantiate and push a detailViewController\cf2 \expnd0\expndtw0\kerning0
+\strike0\striked0 \
 \pard\pardeftab720
 
 \b\fs48 \cf3 \expnd0\expndtw0\kerning0
@@ -60,10 +50,9 @@ Instantiate and push a detailViewController\
 Step 4: Add a public property to the DetailViewController\
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls4\ilvl0
-\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-In the header file, add a string property called titleString\
-\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Before you push the detailViewController in the didSelectRow method, set the titleString to the string from the cell selected\
+\b0\fs32 \cf0 \kerning1\expnd0\expndtw0 \strike \strikec0 {\listtext	\'95	}In the header file, add a string property called titleString\
+{\listtext	\'95	}Before you push the detailViewController in the didSelectRow method, set the titleString to the string from the cell selected\cf2 \expnd0\expndtw0\kerning0
+\strike0\striked0 \
 \pard\pardeftab720
 
 \b\fs48 \cf3 \expnd0\expndtw0\kerning0

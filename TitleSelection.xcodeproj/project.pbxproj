@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		06D2C6B41B4DFA8B00C62D37 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 06D2C6B31B4DFA8B00C62D37 /* Notes.rtf */; };
+		06D2C6B71B4E035000C62D37 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D2C6B61B4E035000C62D37 /* DetailViewController.m */; };
 		7150972019A924FA00E6AE2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150971F19A924FA00E6AE2A /* main.m */; };
 		7150972319A924FA00E6AE2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150972219A924FA00E6AE2A /* AppDelegate.m */; };
 		7150972519A924FA00E6AE2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7150972419A924FA00E6AE2A /* Images.xcassets */; };
 		7150973119A924FA00E6AE2A /* TitleSelectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150973019A924FA00E6AE2A /* TitleSelectionTests.m */; };
-		7150973C19A9250F00E6AE2A /* TitleSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150973B19A9250F00E6AE2A /* TitleSelectorViewController.m */; };
-		7150973F19A925DA00E6AE2A /* TitleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150973E19A925DA00E6AE2A /* TitleTableViewDataSource.m */; };
+		7150973C19A9250F00E6AE2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150973B19A9250F00E6AE2A /* ViewController.m */; };
+		7150973F19A925DA00E6AE2A /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150973E19A925DA00E6AE2A /* DataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06D2C6B31B4DFA8B00C62D37 /* Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
+		06D2C6B31B4DFA8B00C62D37 /* Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Notes.rtf; path = TitleSelection/Notes.rtf; sourceTree = "<group>"; };
+		06D2C6B51B4E035000C62D37 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		06D2C6B61B4E035000C62D37 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7150971A19A924FA00E6AE2A /* TitleSelection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TitleSelection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7150971E19A924FA00E6AE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7150971F19A924FA00E6AE2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -37,10 +40,10 @@
 		7150972A19A924FA00E6AE2A /* TitleSelectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TitleSelectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7150972F19A924FA00E6AE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7150973019A924FA00E6AE2A /* TitleSelectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleSelectionTests.m; sourceTree = "<group>"; };
-		7150973A19A9250F00E6AE2A /* TitleSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleSelectorViewController.h; sourceTree = "<group>"; };
-		7150973B19A9250F00E6AE2A /* TitleSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleSelectorViewController.m; sourceTree = "<group>"; };
-		7150973D19A925DA00E6AE2A /* TitleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleTableViewDataSource.h; sourceTree = "<group>"; };
-		7150973E19A925DA00E6AE2A /* TitleTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleTableViewDataSource.m; sourceTree = "<group>"; };
+		7150973A19A9250F00E6AE2A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7150973B19A9250F00E6AE2A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7150973D19A925DA00E6AE2A /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		7150973E19A925DA00E6AE2A /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 		7150971119A924FA00E6AE2A = {
 			isa = PBXGroup;
 			children = (
+				06D2C6B31B4DFA8B00C62D37 /* Notes.rtf */,
 				7150971C19A924FA00E6AE2A /* TitleSelection */,
 				7150972D19A924FA00E6AE2A /* TitleSelectionTests */,
 				7150971B19A924FA00E6AE2A /* Products */,
@@ -84,11 +88,12 @@
 			children = (
 				7150972119A924FA00E6AE2A /* AppDelegate.h */,
 				7150972219A924FA00E6AE2A /* AppDelegate.m */,
-				7150973A19A9250F00E6AE2A /* TitleSelectorViewController.h */,
-				7150973B19A9250F00E6AE2A /* TitleSelectorViewController.m */,
-				7150973D19A925DA00E6AE2A /* TitleTableViewDataSource.h */,
-				7150973E19A925DA00E6AE2A /* TitleTableViewDataSource.m */,
-				06D2C6B31B4DFA8B00C62D37 /* Notes.rtf */,
+				7150973A19A9250F00E6AE2A /* ViewController.h */,
+				7150973B19A9250F00E6AE2A /* ViewController.m */,
+				7150973D19A925DA00E6AE2A /* DataSource.h */,
+				7150973E19A925DA00E6AE2A /* DataSource.m */,
+				06D2C6B51B4E035000C62D37 /* DetailViewController.h */,
+				06D2C6B61B4E035000C62D37 /* DetailViewController.m */,
 				7150972419A924FA00E6AE2A /* Images.xcassets */,
 				7150971D19A924FA00E6AE2A /* Supporting Files */,
 			);
@@ -219,8 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7150973C19A9250F00E6AE2A /* TitleSelectorViewController.m in Sources */,
-				7150973F19A925DA00E6AE2A /* TitleTableViewDataSource.m in Sources */,
+				06D2C6B71B4E035000C62D37 /* DetailViewController.m in Sources */,
+				7150973C19A9250F00E6AE2A /* ViewController.m in Sources */,
+				7150973F19A925DA00E6AE2A /* DataSource.m in Sources */,
 				7150972319A924FA00E6AE2A /* AppDelegate.m in Sources */,
 				7150972019A924FA00E6AE2A /* main.m in Sources */,
 			);

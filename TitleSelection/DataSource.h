@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface TitleTableViewDataSource : NSObject <UITableViewDataSource>
+@interface DataSource : NSObject <UITableViewDataSource>
 
 - (NSString *)titleAtIndexPath:(NSIndexPath *)path;
 

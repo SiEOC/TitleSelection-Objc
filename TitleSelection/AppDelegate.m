@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TitleSelectorViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +17,9 @@
             
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];   //init screen to size
 
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[TitleSelectorViewController new]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]]; // RootView
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
