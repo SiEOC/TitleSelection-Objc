@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06D2C6B41B4DFA8B00C62D37 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 06D2C6B31B4DFA8B00C62D37 /* Notes.rtf */; };
 		7150972019A924FA00E6AE2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150971F19A924FA00E6AE2A /* main.m */; };
 		7150972319A924FA00E6AE2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150972219A924FA00E6AE2A /* AppDelegate.m */; };
 		7150972519A924FA00E6AE2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7150972419A924FA00E6AE2A /* Images.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06D2C6B31B4DFA8B00C62D37 /* Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		7150971A19A924FA00E6AE2A /* TitleSelection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TitleSelection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7150971E19A924FA00E6AE2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7150971F19A924FA00E6AE2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				7150973B19A9250F00E6AE2A /* TitleSelectorViewController.m */,
 				7150973D19A925DA00E6AE2A /* TitleTableViewDataSource.h */,
 				7150973E19A925DA00E6AE2A /* TitleTableViewDataSource.m */,
+				06D2C6B31B4DFA8B00C62D37 /* Notes.rtf */,
 				7150972419A924FA00E6AE2A /* Images.xcassets */,
 				7150971D19A924FA00E6AE2A /* Supporting Files */,
 			);
@@ -197,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D2C6B41B4DFA8B00C62D37 /* Notes.rtf in Resources */,
 				7150972519A924FA00E6AE2A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +396,7 @@
 				7150973619A924FA00E6AE2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7150973719A924FA00E6AE2A /* Build configuration list for PBXNativeTarget "TitleSelectionTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +405,7 @@
 				7150973919A924FA00E6AE2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
