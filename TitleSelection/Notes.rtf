@@ -1,7 +1,8 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
-{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red50\green98\blue178;\red224\green158\blue102;
-\red174\green62\blue52;\red0\green160\blue255;\red64\green128\blue0;}
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red37\green127\blue159;\red234\green234\blue234;\red43\green39\blue19;
+\red107\green0\blue1;\red0\green0\blue120;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
@@ -12,71 +13,123 @@
 \deftab720
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls1\ilvl0
-\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
-\
+\f0\b\fs32 \cf0 \
 \pard\pardeftab720
 
-\b\fs48 \cf3 \expnd0\expndtw0\kerning0
-\
-\pard\pardeftab720
-
-\b0 \cf0 \kerning1\expnd0\expndtw0 \strike \strikec0 Step 2: Add Delegate methods\
+\fs48 \cf0 \
+Step 2: Add Delegate methods\
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls2\ilvl0
 \fs32 \cf0 {\listtext	\'95	}Set as adopted in the implementation file of TitleSelectorViewController\
 {\listtext	\'95	}Remember to add self as the delegate of the tableview\
 {\listtext	\'95	}Add the didSelectRowAtIndexPath method to the implementation file of TitleSelectorViewController\
-{\listtext	\'95	}In the didSelectRowAtIndexPath method change the title of the view controller to the text of the selected row. (you can get that information from self.datasource)\cf2 \expnd0\expndtw0\kerning0
-\strike0\striked0 \
+{\listtext	\'95	}In the didSelectRowAtIndexPath method change the title of the view controller to the text of the selected row. (you can get that information from self.datasource)\
 \pard\pardeftab720
 
-\b\fs48 \cf3 \expnd0\expndtw0\kerning0
-\
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
+\fs48 \cf0 \
 Step 3: Add DetailViewController\
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls3\ilvl0
-\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\cf0 \strike \strikec0 \'95	}\cf2 \strike0\striked0 Create a new UIViewController called TitleDetailViewController\expnd0\expndtw0\kerning0
-\
-\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \strike \strikec0 {\listtext	\'95	}Remove the title change in the didSelectRow method\
-{\listtext	\'95	}Instantiate and push a detailViewController\cf2 \expnd0\expndtw0\kerning0
-\strike0\striked0 \
+\fs32 \cf0 {\listtext	\'95	}Create a new UIViewController called TitleDetailViewController\
+{\listtext	\'95	}Remove the title change in the didSelectRow method\
+{\listtext	\'95	}Instantiate and push a detailViewController\
 \pard\pardeftab720
 
-\b\fs48 \cf3 \expnd0\expndtw0\kerning0
-\
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
+\fs48 \cf0 \
 Step 4: Add a public property to the DetailViewController\
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls4\ilvl0
-\b0\fs32 \cf0 \kerning1\expnd0\expndtw0 \strike \strikec0 {\listtext	\'95	}In the header file, add a string property called titleString\
-{\listtext	\'95	}Before you push the detailViewController in the didSelectRow method, set the titleString to the string from the cell selected\cf2 \expnd0\expndtw0\kerning0
-\strike0\striked0 \
+\fs32 \cf0 {\listtext	\'95	}In the header file, add a string property called titleString\
+{\listtext	\'95	}Before you push the detailViewController in the didSelectRow method, set the titleString to the string from the cell selected\
 \pard\pardeftab720
 
-\b\fs48 \cf3 \expnd0\expndtw0\kerning0
-\
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
+\fs48 \cf0 \
 Step 5: Add a label to the detail view to show what was selected\
 \pard\tx220\tx720\pardeftab720\li720\fi-720
 \ls5\ilvl0
-\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-In the detail view controller's viewDidLoad method add a UILabel\
-\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
-Set the text of the label to self.titleString\
+\fs32 \cf0 {\listtext	\'95	}In the detail view controller's viewDidLoad method add a UILabel\
+{\listtext	\'95	}Set the text of the label to self.titleString\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13200\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\f1\b0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+UITapGestureRecognizer\cf4 \expnd0\expndtw0\kerning0
+ * tapGesture = [[\cf2 \expnd0\expndtw0\kerning0
+UITapGestureRecognizer\cf4 \expnd0\expndtw0\kerning0
+ alloc] initWithTarget:self action:\cf5 \expnd0\expndtw0\kerning0
+@selector\cf4 \expnd0\expndtw0\kerning0
+(doSomething:)];\
+\cf2 \expnd0\expndtw0\kerning0
+UILabel\cf4 \expnd0\expndtw0\kerning0
+ * titleView = [\cf2 \expnd0\expndtw0\kerning0
+UILabel\cf4 \expnd0\expndtw0\kerning0
+ \cf6 \expnd0\expndtw0\kerning0
+new\cf4 \expnd0\expndtw0\kerning0
+];\
+titleView.text = @\cf5 \expnd0\expndtw0\kerning0
+"Test"\cf4 \expnd0\expndtw0\kerning0
+;\
+[titleView sizeToFit];\
+titleView.userInteractionEnabled = YES;\
+[titleView addGestureRecognizer:tapGesture];   // Best Way Do notRead on ;)\
+\
+self.navigationItem.titleView = titleView;\expnd0\expndtw0\kerning0
+\cell \lastrow\row
 \pard\tx560\pardeftab720
-\cf2 \
-\
-\
-\
+
+\f0\b\fs32 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx529\pardeftab529\pardirnatural
+
+\f2\fs22 \cf0     \
+    // Q: Movies appear after detail view...,\
+    //    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:@"Test" style:UIBarButtonItemStylePlain target:self action:@selector(test)];\
+//    self.navigationItem.leftBarButtonItem = newBackButton;\
+//    animated = TRUE;\
+    \
+/* \
+ \
+ \
+ \
+ At compile time, you use the compiler directive @selector:\
+ \
+ SEL aSelector = @selector(methodName);\
+ \
+ At runtime, you use the NSSelectorFromString function, where the string is the name of the method:\
+ \
+ SEL aSelector = NSSelectorFromString(@"methodName");\
+ \
+ You use a selector created from a string when you want your code to send a message whose name you may not know until runtime.\
+// Cool\
+ \
+ SEL aSelector = @selector(run);\
+ [aDog performSelector:aSelector]\
+ \
+ */
+\f0\fs32 \
+
+\f2\fs22 //    UIButton *titleView = [[UIImageView alloc] initWithFrame:([self.view sizeToFit],[self.view sizeToFit])   // (96, 32)]];\
+//    \
+//    UITapGestureRecognizer *oneFingerOneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerOneTap)];\
+//    \
+//    // Set required taps and number of touches\
+//    [oneFingerOneTap setNumberOfTapsRequired:1];\
+//    [oneFingerOneTap setNumberOfTouchesRequired:1];\
+//    \
+//    [self.navigationController.navigationBar setUserInteractionEnabled:YES];\
+//    [titleView setUserInteractionEnabled:YES];\
+//    [titleView addGestureRecognizer:oneFingerOneTap];\
+//    \
+//    self.navigationItem.titleView = titleView;
+\f0\fs32 \
+\pard\tx560\pardeftab720
+\cf0 \
 \
 \pard\tx529\pardeftab529\pardirnatural
 
-\f1\fs22 \cf4 \kerning1\expnd0\expndtw0 \CocoaLigature0  \
-\cf0 \strike \strikec0 \CocoaLigature1     detailViewController.titleString = [self.dataSource titleAtIndexPath:indexPath];\
+\f2\fs22 \cf0  \
+    detailViewController.titleString = [self.dataSource titleAtIndexPath:indexPath];\
     [self.navigationController pushViewController:detailViewController animated:YES];\
                                        \
                  NSArray *indexMediatorForindexValues = [self.dataSource titleAtIndexPath:indexPath];\
@@ -85,36 +138,34 @@ Set the text of the label to self.titleString\
 \
     return indexMediatorForindexValues;\
 
-\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
-\strike0\striked0 \
-\pard\tx529\pardeftab529\pardirnatural
+\f0\fs32 \
 
-\f1\fs22 \cf4 \kerning1\expnd0\expndtw0 \CocoaLigature0 - (\cf5 BOOL\cf4 )tableView:(\cf6 UITableView\cf4  *)tableView canEditRowAtIndexPath:(\cf6 NSIndexPath\cf4  *)indexPath\
+\f2\fs22 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath\
 \{\
-    \cf1 // Return YES if you want the specified item to be editable.\cf4 \
-    \cf5 return\cf4  \cf5 YES\cf4 ;\
+    // Return YES if you want the specified item to be editable.\
+    return YES;\
 \}\
 \
 \
-\cf1 // Override to support editing the table view.\cf4 \
-- (\cf5 void\cf4 )tableView:(\cf6 UITableView\cf4  *)tableView commitEditingStyle:(\cf6 UITableViewCellEditingStyle\cf4 )editingStyle forRowAtIndexPath:(\cf6 NSIndexPath\cf4  *)indexPath \{\
-    \cf5 if\cf4  (editingStyle == \cf6 UITableViewCellEditingStyleDelete\cf4 ) \{\
-        \cf1 //add code here for when you hit delete\cf4 \
+// Override to support editing the table view.\
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath \{\
+    if (editingStyle == UITableViewCellEditingStyleDelete) \{\
+        //add code here for when you hit delete\
     \}\
 \}\
 \
 \
-- (\cf5 void\cf4 )delete:(\cf5 id\cf4 )sender  \cf1 //(id)sender is the object which sent the message to that selector.\cf4 \
+- (void)delete:(id)sender  //(id)sender is the object which sent the message to that selector.\
 \{\
-\cf1 //    self.tableView deleteRowsAtIndexPaths: withRowAnimation:nil;\cf4 \
+//    self.tableView deleteRowsAtIndexPaths: withRowAnimation:nil;\
 \}\
 \
      \
-- (\cf5 void\cf4 )setEditing:(\cf5 BOOL\cf4 )editing animated:(\cf5 BOOL\cf4 )animated\
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated\
 \{\
-        \cf5 self\cf4 .\cf7 tableView\cf4 .\cf6 allowsMultipleSelectionDuringEditing\cf4  = editing;\
-        [\cf5 super\cf4  \cf6 setEditing\cf4 :editing \cf6 animated\cf4 :animated];\
+        self.tableView.allowsMultipleSelectionDuringEditing = editing;\
+        [super setEditing:editing animated:animated];\
 \
-      \cf1 // insert into NavBArbutton Method..  [self setEditing:YES animated:YES];\cf4 \
+      // insert into NavBArbutton Method..  [self setEditing:YES animated:YES];\
 \}\
   }

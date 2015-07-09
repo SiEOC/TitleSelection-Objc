@@ -17,28 +17,26 @@
 
 @end
 
-/*
- Step 2: Add Delegate methods
-	
-	•	Remember to add self as the delegate of the tableview
-	•	Add the didSelectRowAtIndexPath method to the implementation file of TitleSelectorViewController
-	•	In the didSelectRowAtIndexPath method change the title of the view controller to the text of the selected row. (you can get that information from self.datasource)
- */
-
 @implementation ViewController
 
 -(void)viewWillAppear:(BOOL)animated
 {
+   
+//    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle:@"Test" style:UIBarButtonItemStylePlain target:self action:@selector(test)];
+//    self.navigationItem.leftBarButtonItem = newBackButton;
+//    
+//    
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+//    [self.navigationItem setRightBarButtonItem:rightItem animated:YES];
     
-    // Q: Movies appear after detail view...,
     
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"-" style:UIBarButtonItemStylePlain target:self action:nil];
-    [self.navigationItem setLeftBarButtonItem:leftItem animated:YES];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor purpleColor]];
+    [self.navigationController.navigationBar setTranslucent:NO]; // Need this to apply colors
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:nil];
-    [self.navigationItem setRightBarButtonItem:rightItem animated:YES];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil]];
     
-    
+    self.title = @"Movies";
     
     self.navigationController.navigationBar.tintColor = [UIColor redColor]; // Seen but Not Title
     [self.navigationController.navigationBar setBarTintColor:[UIColor grayColor]]; // Seen on only ViewController
@@ -48,35 +46,43 @@
     
     self.title = @"Movies";
     
-   
-    
-}
-
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    
-    
     self.dataSource = [DataSource new];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
-    //Delegate & Data Source
+    /*Delegate & Data Source*/
     self.tableView.delegate = (self);
     self.tableView.dataSource = self.dataSource;
-    self.tableView.backgroundColor = [UIColor cyanColor];  //Changes Space Between NavBar and TableView
-    
-    // Add To View
+    self.tableView.backgroundColor = [UIColor cyanColor];  /*Changes Color To  Space Between NavBar and TableView*/
+
     [self.view addSubview:self.tableView];
-    
 }
+
+-(void)test
+{
+    NSLog(@"Test Method For NavBar Left Is Executed");
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(test)];
+    UILabel * titleView = [UILabel new];
+    titleView.text = @"Test";
+    [titleView sizeToFit];
+    titleView.userInteractionEnabled = YES;
+    [titleView addGestureRecognizer:tapGesture];
+    
+    self.navigationItem.titleView = titleView;
+     [self.navigationController.navigationBar setTranslucent:NO];
+}
+
+
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     DetailViewController *detailViewController = [DetailViewController new];
-    
     detailViewController.titleString = [self.dataSource titleAtIndexPath:indexPath];
     [self.navigationController pushViewController:detailViewController animated:YES];
                                        
@@ -86,16 +92,7 @@
 
 
 
-// Want To Select Many To Delete
 
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated
-{
-        self.tableView.allowsMultipleSelectionDuringEditing = editing;
-        [super setEditing:editing animated:animated];
-
-      // insert into NavBArbutton Method..  [self setEditing:YES animated:YES];
-}
-     
      
      
      

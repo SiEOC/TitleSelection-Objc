@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+\
+
 @interface ViewController : UIViewController <UICollectionViewDelegate>
 
 
+-(NSString *)logIt:(NSString*)functionalOrNot; //Test Methods
 
 
 @end
