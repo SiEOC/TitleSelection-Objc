@@ -16,11 +16,14 @@
 
 - (void)viewDidLoad
 {
-    sleep(1);
     
     [super viewDidLoad];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:@"Here it is"  delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+    [self isFirstResponder];
+    
+    [self reloadInputViews];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:@"Here"  delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     
     [alert show];
     
