@@ -23,22 +23,32 @@
 	•	Remember to add self as the delegate of the tableview
 	•	Add the didSelectRowAtIndexPath method to the implementation file of TitleSelectorViewController
 	•	In the didSelectRowAtIndexPath method change the title of the view controller to the text of the selected row. (you can get that information from self.datasource)
-
- 
  */
 
 @implementation ViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    // Q: Movies appear after detail view...,
+    
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Left Side" style:UIBarButtonItemStylePlain target:self action:nil];
+    [self.navigationItem setLeftBarButtonItem:leftItem animated:YES];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Right Side" style:UIBarButtonItemStylePlain target:self action:nil];
+    [self.navigationItem setRightBarButtonItem:rightItem animated:YES];
+    
+    
+    
+    self.navigationController.navigationBar.tintColor = [UIColor redColor]; // Seen but Not Title
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]]; // Seen on only ViewController
+    [self.navigationController.navigationBar setTranslucent:NO]; // Need this to apply colors
+    self.title = @"Movies";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Table View Size Created
-    
-    
-    
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]]; // Sets Entire Bar
-    [self.navigationController.navigationBar setTranslucent:NO];
+
     
     
     self.dataSource = [DataSource new];
@@ -53,38 +63,16 @@
     
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
     DetailViewController *detailViewController = [DetailViewController new];
     
     detailViewController.titleString = [self.dataSource titleAtIndexPath:indexPath];
     [self.navigationController pushViewController:detailViewController animated:YES];
     
-    self.title = @"Movies";
-    
-
-
     
     
-//    [[UINavigationBar appearance] setTitleTextAttributes:
-//     [NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor],
-//    
-//      NSForegroundColorAttributeName,
-//      [UIColor purpleColor],
-////      
-//                                NSForegroundColorAttributeName,
-//                                [NSValue valueWithUIOffset:UIOffsetMake(0, -1)],
-//      
-//      
-//                                    NSForegroundColorAttributeName,
-//                                    [UIFont fontWithName:@"Arial-Bold" size:15],
-
-    
-   
-
-
-
-   
 
 
 }

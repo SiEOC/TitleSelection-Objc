@@ -17,15 +17,16 @@
             
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];   //init screen to size
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]]; // RootView
-    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]]; // RootView
     
-    
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor redColor];
     [self.window makeKeyAndVisible];
+    
+    
+    
+    
     return YES;
 }
 

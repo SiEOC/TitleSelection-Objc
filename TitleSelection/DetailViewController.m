@@ -19,26 +19,16 @@
     
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; // Not Seen on ViewController
+    [self.navigationController.navigationBar setBarTintColor:[UIColor grayColor]]; // Seen on both VC's
+    [self.navigationController.navigationBar setTranslucent:NO]; // Need this to apply colors
     
-    
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
-    
-   
-    [self.navigationController.navigationBar setTranslucent:NO];
-    
-    
-    self.view.backgroundColor = [UIColor grayColor];
-    
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:@"Here"  delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    
-    [alert show];
-  
+    self.view.backgroundColor = [UIColor redColor];  // Detail Background Color
     
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 200, 300, 100)];
     
-    label.textColor = [UIColor redColor];
+    label.textColor = [UIColor whiteColor];
     label.text = self.titleString;
     
     [self.view addSubview:label];
