@@ -42,7 +42,7 @@
     [self.navigationController.navigationBar setTranslucent:NO]; // Need this to apply colors
     
     
-    /*          Title Color & "Name"     Detail Controller   Non Action Derived Just Title & Color     */
+    /*          Title Color & "Name"   Detail Controller   Non Action Derived Just Title & Color */
     
     [self.navigationController.navigationBar
      setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor orangeColor], NSForegroundColorAttributeName,nil]];
@@ -54,7 +54,7 @@
     
     self.view.backgroundColor = [UIColor redColor];  // Detail Background Color
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 200, 300, 100)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(70, 100, 250, 100)];
     
     label.textColor = [UIColor whiteColor];
     label.text = self.titleString;

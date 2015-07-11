@@ -8,6 +8,7 @@
 
 #import "DataSource.h"
 
+
 @implementation DataSource
 
 /* Number OF Rows in section 
@@ -20,34 +21,51 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self titles].count;
-}
 
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    UIImage *image1 = [UIImage imageNamed:@"leafz.png"];
+    UIImage *image2 = [UIImage imageNamed:@"swirlz.png"];
+    UIImage *image3 = [UIImage imageNamed:@"moonz.png"];
+    UIImage *image4 = [UIImage imageNamed:@"tetrisz.png"];
+
+    
+// How To Add This To A Case?
+    
     if (!cell)
     {
-        
+
         cell = [UITableViewCell new];
         
-        if (indexPath.row % 4) // Adjust to New..  Do ()
+        if (indexPath.row % 4)
         {
             cell.backgroundColor = [UIColor whiteColor];
             cell.textLabel.textColor = [UIColor redColor];
-
+            cell.imageView.image = image1;
+            cell.imageView.highlightedImage = image2;
+            
         }
         else
         {
             cell.backgroundColor = [UIColor whiteColor];
             cell.textLabel.textColor = [UIColor blackColor];
-  
+            cell.imageView.image = image3;
+            cell.imageView.highlightedImage = image4;
+           
         }
-    
+        
     }
-     cell.textLabel.text = [self titles][indexPath.row]; //Important
+    cell.textLabel.text = [self titles][indexPath.row]; //Important
     
     return cell;
 }
+
+
+
+
 
 - (NSArray *)titles {
     return @[@"The Constant Gardener", @"How the West Was Fun", @"Every Which Way But Loose", @"Riding In Cars With Boys", @"It Happened One Night", @"Firday After Next", @"Herbie: Fully Loaded", @"The Owls of GaHoole", @"Surfer Dude", @"The Day After Tomorrow", @"John Carter", @"Octopussy", @"Face Off", @"I Still Know What You Did Last Summer", @"Gigli"];

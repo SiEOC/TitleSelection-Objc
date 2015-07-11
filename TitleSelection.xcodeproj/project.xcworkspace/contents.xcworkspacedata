@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:leafz.png">
+   </FileRef>
+   <FileRef
+      location = "group:moonz.png">
+   </FileRef>
+   <FileRef
+      location = "group:swirlz.png">
+   </FileRef>
+   <FileRef
+      location = "group:tetrisz.png">
+   </FileRef>
+   <FileRef
       location = "self:TitleSelection.xcodeproj">
    </FileRef>
 </Workspace>
