@@ -34,6 +34,12 @@
                                                                          target:self
                                                                          action:nil];
     
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+     
+    setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor,nil]
+     
+     forState:UIControlStateNormal];
+    
     [[self.navigationController.navigationBar.subviews lastObject] setTintColor:[UIColor redColor]]; // Arrow ONlY Color
     
     [self.navigationController.navigationBar setTranslucent:NO]; // Need this to apply colors
@@ -42,7 +48,7 @@
     /*          Title Color & "Name"     Detail Controller   Non Action Derived Just Title & Color     */
     
     [self.navigationController.navigationBar
-     setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor greenColor], NSForegroundColorAttributeName,nil]];
+     setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor orangeColor], NSForegroundColorAttributeName,nil]];
     
     self.title = @"Quote";
     
@@ -56,6 +62,7 @@
     
     label.textColor = [UIColor whiteColor];
     label.text = self.titleString;
+  
     
     [self.view addSubview:label];
   
