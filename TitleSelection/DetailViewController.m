@@ -14,17 +14,33 @@
 
 @implementation DetailViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+}
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
     
+    /*  Navbar Controller Colors & Adjust Back ButtonWith String Value */
+    
     self.navigationController.navigationBar.tintColor = [UIColor greenColor]; // Not Seen on ViewController
     [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]]; // Seen on both VC's
+    
+    self.navigationController.navigationBar.topItem.backBarButtonItem = [[UIBarButtonItem alloc]
+                                                                         initWithTitle:@"Movies"
+                                                                         style:UIBarButtonItemStylePlain
+                                                                         target:self
+                                                                         action:nil];
+    
+    [[self.navigationController.navigationBar.subviews lastObject] setTintColor:[UIColor redColor]]; // Arrow ONlY Color
+    
     [self.navigationController.navigationBar setTranslucent:NO]; // Need this to apply colors
     
     
     /*          Title Color & "Name"     Detail Controller   Non Action Derived Just Title & Color     */
+    
     [self.navigationController.navigationBar
      setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor greenColor], NSForegroundColorAttributeName,nil]];
     
@@ -50,14 +66,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
