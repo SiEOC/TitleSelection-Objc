@@ -19,7 +19,7 @@
 
 @implementation ViewController
 
-- (void)viewDidAppear:(BOOL)animated  // As of rght Now view Did load is not 'respndig'  "viee will appear is.. :)
+- (void)viewDidAppear:(BOOL)animated  
 {
 
     
@@ -33,10 +33,7 @@
     
     self.navigationItem.titleView = titleView;
     [self.navigationController.navigationBar setTranslucent:NO];
-}
 
--(void)viewWillAppear:(BOOL)animated
-{
   
     /* Adding Butotons To  Left Nav Bar Item @ View Controller  */
     
@@ -60,22 +57,37 @@
     [self.navigationItem setRightBarButtonItem:addButton animated:YES];
     
 
-    /*      Color For View Controller       */
+    /*      Color For View Controller */
     
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; // View Controller
-    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]]; // View Controller
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
     
     
+   /*          Delegate & Data Source */
     
-   /*          Delegate & Data Source        */
+// Why Does The TableView Create Another TableView Object WhenI Returm To The "ViewController" Page? // It Is the old instance (Shows My Previous Selected Title (Cell With Title) Is this A Nav Stack Property? Deque?  I Mask the isssue With WhiteBackground See Line 74-65.
     
     self.dataSource = [DataSource new]; // run time
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds] style:UITableViewStylePlain];
     self.tableView.delegate = (self);  // √ The object that acts as the delegate of the table view.
     self.tableView.dataSource = self.dataSource;
-    self.tableView.backgroundColor = [UIColor clearColor];  /*Changes Color To  Space Between NavBar and TableView*/
-    [self.view addSubview:self.tableView];
+    self.tableView.backgroundColor = [UIColor whiteColor];  /*Changes Color To  Space Between NavBar and TableView */
+    [self.view addSubview:self.tableView]; // Add TableView To View.
 }
+
+
+#pragma All My Methods SelectATIndex, Left,Title, Right
+
+/* If I Will Select A Cell I will Then Get A Push To View Controler.  I should Have used The PresentViewController Method Instead. */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath // Push To Next ViewController
+{
+    DetailViewController *detailViewController = [DetailViewController new];
+    detailViewController.titleString = [self.dataSource titleAtIndexPath:indexPath];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    
+}
+
 
 -(void)leftMethod
 {
@@ -92,20 +104,6 @@
 {
     NSLog(@"Test Is Functional For Title label Gesture ON NAV BAR");
 }
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DetailViewController *detailViewController = [DetailViewController new];
-    detailViewController.titleString = [self.dataSource titleAtIndexPath:indexPath];
-    [self.navigationController pushViewController:detailViewController animated:YES];
-                                       
-    
-}
-
-
-
-
 
      
      

@@ -10,6 +10,13 @@
 
 @implementation DataSource
 
+/* Number OF Rows in section 
+   Cell For Row At Index
+   Array of Titles
+   ttilesAtIndex
+ 
+ */
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self titles].count;
@@ -25,13 +32,13 @@
         
         if (indexPath.row % 4) // Adjust to New..  Do ()
         {
-            cell.backgroundColor = [UIColor blackColor];
-            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.backgroundColor = [UIColor whiteColor];
+            cell.textLabel.textColor = [UIColor redColor];
 
         }
         else
         {
-            cell.backgroundColor = [UIColor redColor];
+            cell.backgroundColor = [UIColor whiteColor];
             cell.textLabel.textColor = [UIColor blackColor];
   
         }
@@ -48,8 +55,10 @@
 
 - (NSString *)titleAtIndexPath:(NSIndexPath *)path
 {
-    if (path.row < [self titles].count) {
-        return [self titles][path.row];
+    
+    if (path.row < [self titles].count) //  Number Of  Objects in an Array.
+    {
+        return [self titles][path.row]; //  The Row Number In A Particular Section
     } else {
         return nil;
     }

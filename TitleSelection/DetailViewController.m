@@ -14,16 +14,13 @@
 
 @implementation DetailViewController
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    
-}
+
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
     
-    /*  Navbar Controller Colors & Adjust Back ButtonWith String Value */
+      /* Navbar Controller Colors & Adjust Back ButtonWith String Value */
     
     self.navigationController.navigationBar.tintColor = [UIColor greenColor]; // Not Seen on ViewController
     [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]]; // Seen on both VC's
@@ -55,7 +52,6 @@
     
     /* Background & Label: Holiding String Value */
     
-    
     self.view.backgroundColor = [UIColor redColor];  // Detail Background Color
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 200, 300, 100)];
@@ -64,7 +60,7 @@
     label.text = self.titleString;
   
     
-    [self.view addSubview:label];
+    [self.view addSubview:label]; // Add Label To DetailView
   
 }
 
