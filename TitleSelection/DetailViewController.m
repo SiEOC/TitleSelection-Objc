@@ -19,12 +19,22 @@
     
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; // Not Seen on ViewController
-    [self.navigationController.navigationBar setBarTintColor:[UIColor grayColor]]; // Seen on both VC's
+    self.navigationController.navigationBar.tintColor = [UIColor greenColor]; // Not Seen on ViewController
+    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]]; // Seen on both VC's
     [self.navigationController.navigationBar setTranslucent:NO]; // Need this to apply colors
     
-    self.view.backgroundColor = [UIColor redColor];  // Detail Background Color
     
+    /*          Title Color & "Name"     Detail Controller   Non Action Derived Just Title & Color     */
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor greenColor], NSForegroundColorAttributeName,nil]];
+    
+    self.title = @"Quote";
+    
+    
+    /* Background & Label: Holiding String Value */
+    
+    
+    self.view.backgroundColor = [UIColor redColor];  // Detail Background Color
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(60, 200, 300, 100)];
     
@@ -32,9 +42,7 @@
     label.text = self.titleString;
     
     [self.view addSubview:label];
-    
-    
-   
+  
 }
 
 - (void)didReceiveMemoryWarning {

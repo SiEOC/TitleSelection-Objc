@@ -21,7 +21,7 @@
 
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]]; // RootView
     
-    self.window.backgroundColor = [UIColor purpleColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     [self.window makeKeyAndVisible];
     

@@ -8,12 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-\
+
 
 @interface ViewController : UIViewController <UICollectionViewDelegate>
 
 
--(NSString *)logIt:(NSString*)functionalOrNot; //Test Methods
+-(void)leftMethod;
+
+
+-(void)rightMethod;
+
+
+-(void)titleGestureLabelMethod;
+
+
+
 
 
 @end
