@@ -25,7 +25,7 @@
     
     UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleGestureLabelMethod)];
     UILabel * titleView = [UILabel new];
-    titleView.text = @"VC Page";
+    titleView.text = @"Movie Titles";
     titleView.textColor = [UIColor redColor];
     [titleView sizeToFit];
     titleView.userInteractionEnabled = YES;
@@ -41,7 +41,7 @@
     /* Adding Butotons To  Left Nav Bar Item @ View Controller  */
     
     UIBarButtonItem *removeButton = [[UIBarButtonItem alloc]
-                                      initWithTitle:@"Remove"
+                                      initWithTitle:@"Remove -"
                                       style:UIBarButtonItemStylePlain
                                       target:self
                                       action:@selector(leftMethod)]; // Not yet functional //Skyler elden clark
@@ -52,7 +52,7 @@
     /*   Right Nav Button  @ View Controller  */
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
-                                  initWithTitle:@"Add"
+                                  initWithTitle:@"Add +"
                                   style:UIBarButtonItemStylePlain
                                   target:self
                                   action:@selector(rightMethod)];
@@ -62,8 +62,8 @@
 
     /*      Color For View Controller       */
     
-    self.navigationController.navigationBar.tintColor = [UIColor redColor]; // View Controller
-    [self.navigationController.navigationBar setBarTintColor:[UIColor grayColor]]; // View Controller
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor]; // View Controller
+    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]]; // View Controller
     
     
     
@@ -73,7 +73,7 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.tableView.delegate = (self);  // √ The object that acts as the delegate of the table view.
     self.tableView.dataSource = self.dataSource;
-    self.tableView.backgroundColor = [UIColor cyanColor];  /*Changes Color To  Space Between NavBar and TableView*/
+    self.tableView.backgroundColor = [UIColor clearColor];  /*Changes Color To  Space Between NavBar and TableView*/
     [self.view addSubview:self.tableView];
 }
 

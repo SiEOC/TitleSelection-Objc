@@ -25,14 +25,14 @@
         
         if (indexPath.row % 4) // Adjust to New..  Do ()
         {
-            cell.backgroundColor = [UIColor redColor];
+            cell.backgroundColor = [UIColor blackColor];
             cell.textLabel.textColor = [UIColor whiteColor];
 
         }
         else
         {
-            cell.backgroundColor = [UIColor grayColor];
-            cell.textLabel.textColor = [UIColor redColor];
+            cell.backgroundColor = [UIColor redColor];
+            cell.textLabel.textColor = [UIColor blackColor];
   
         }
     
