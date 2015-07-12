@@ -23,6 +23,8 @@
     return [self titles].count;
 
 }
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -46,6 +48,13 @@
             cell.textLabel.textColor = [UIColor redColor];
             cell.imageView.image = image1;
             cell.imageView.highlightedImage = image2;
+            
+            
+            UITextField *txtField = [[UITextField alloc] initWithFrame:CGRectMake(165.0, 7.0, 150.0, 30.0)];
+            txtField.text = @"Latest";
+            txtField.textColor = [UIColor redColor];
+            txtField.textAlignment = NSTextAlignmentRight;
+            [cell.contentView addSubview:txtField];
             
         }
         else
