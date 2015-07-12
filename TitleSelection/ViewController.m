@@ -84,6 +84,7 @@
 {
     DetailViewController *detailViewController = [DetailViewController new];
     detailViewController.titleString = [self.dataSource titleAtIndexPath:indexPath];
+    
     [self.navigationController pushViewController:detailViewController animated:YES];
     
 }

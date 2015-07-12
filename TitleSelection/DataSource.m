@@ -50,10 +50,10 @@
             cell.imageView.highlightedImage = image2;
             
             
-            UITextField *txtField = [[UITextField alloc] initWithFrame:CGRectMake(165.0, 7.0, 150.0, 30.0)];
-            txtField.text = @"Latest";
-            txtField.textColor = [UIColor redColor];
-            txtField.textAlignment = NSTextAlignmentRight;
+            UITextField *txtField = [[UITextField alloc] initWithFrame:CGRectMake(100.0, 7.0, 150.0, 30.0)];
+            txtField.text = @"@";
+            txtField.textColor = [UIColor blackColor];
+            txtField.textAlignment = NSTextAlignmentLeft;
             [cell.contentView addSubview:txtField];
             
         }
@@ -63,11 +63,16 @@
             cell.textLabel.textColor = [UIColor blackColor];
             cell.imageView.image = image3;
             cell.imageView.highlightedImage = image4;
-           
+            UITextField *textFieldTwo = [[UITextField alloc] initWithFrame:CGRectMake(100.0, 7.0, 150.0, 30.0)];
+            textFieldTwo.text = @"&";
+            textFieldTwo.textColor = [UIColor redColor];
+            textFieldTwo.textAlignment = NSTextAlignmentLeft;
+            [cell.contentView addSubview:textFieldTwo];
         }
         
     }
-    cell.textLabel.text = [self titles][indexPath.row]; //Important
+    cell.textLabel.textAlignment = NSTextAlignmentRight;
+    cell.textLabel.text =  [self titles][indexPath.row]; //Important
     
     return cell;
 }
@@ -76,7 +81,8 @@
 
 
 
-- (NSArray *)titles {
+- (NSArray *)titles
+{
     return @[@"The Constant Gardener", @"How the West Was Fun", @"Every Which Way But Loose", @"Riding In Cars With Boys", @"It Happened One Night", @"Firday After Next", @"Herbie: Fully Loaded", @"The Owls of GaHoole", @"Surfer Dude", @"The Day After Tomorrow", @"John Carter", @"Octopussy", @"Face Off", @"I Still Know What You Did Last Summer", @"Gigli"];
 }
 
