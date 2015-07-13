@@ -39,39 +39,30 @@
     
     if (!cell)
     {
+        
 
         cell = [UITableViewCell new];
         
-        if (indexPath.row % 4)
+        if ((indexPath.row % 20 ) && (indexPath.row < 0))
         {
             cell.backgroundColor = [UIColor whiteColor];
             cell.textLabel.textColor = [UIColor redColor];
-            cell.imageView.image = image1;
-            cell.imageView.highlightedImage = image2;
-            
-            
-            UITextField *txtField = [[UITextField alloc] initWithFrame:CGRectMake(100.0, 7.0, 150.0, 30.0)];
-            txtField.text = @"@";
-            txtField.textColor = [UIColor blackColor];
-            txtField.textAlignment = NSTextAlignmentLeft;
-            [cell.contentView addSubview:txtField];
+            cell.imageView.image = image3;
+            cell.imageView.highlightedImage = image4;
+            cell.imageView.clipsToBounds = YES;
             
         }
-        else
+        else // Negated This Untill Size is Equal.  // Set Widt & Height ThenSet to UIImage // No altertaions After image is set
         {
             cell.backgroundColor = [UIColor whiteColor];
             cell.textLabel.textColor = [UIColor blackColor];
-            cell.imageView.image = image3;
-            cell.imageView.highlightedImage = image4;
-            UITextField *textFieldTwo = [[UITextField alloc] initWithFrame:CGRectMake(100.0, 7.0, 150.0, 30.0)];
-            textFieldTwo.text = @"&";
-            textFieldTwo.textColor = [UIColor redColor];
-            textFieldTwo.textAlignment = NSTextAlignmentLeft;
-            [cell.contentView addSubview:textFieldTwo];
+            cell.imageView.image = image4;
+            cell.imageView.highlightedImage = image3;
+            cell.imageView.clipsToBounds = YES;
         }
         
     }
-    cell.textLabel.textAlignment = NSTextAlignmentRight;
+    cell.textLabel.textAlignment = NSTextAlignmentLeft;
     cell.textLabel.text =  [self titles][indexPath.row]; //Important
     
     return cell;
