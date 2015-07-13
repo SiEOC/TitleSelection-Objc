@@ -21,8 +21,7 @@
 
 - (void)viewDidAppear:(BOOL)animated  
 {
-
-    
+   
     UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleGestureLabelMethod)];
     UILabel * titleView = [UILabel new];
     titleView.text = @"Movie Titles";

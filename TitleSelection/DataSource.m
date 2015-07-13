@@ -11,10 +11,12 @@
 
 @implementation DataSource
 
-/* Number OF Rows in section 
-   Cell For Row At Index
-   Array of Titles
-   ttilesAtIndex
+/* 
+ 
+    Number OF Rows in section
+    Cell For Row At Index
+    Array of Titles
+    TtilesAtIndex
  
  */
 
@@ -25,7 +27,7 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath  // Tells the data source to return the number of rows in a given section of a table view. (required)
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
@@ -34,10 +36,6 @@
     UIImage *image3 = [UIImage imageNamed:@"moonz.png"];
     UIImage *image4 = [UIImage imageNamed:@"tetrisz.png"];
     
-
-
-    
-// How To Add This To A Case?
     
     if (!cell)
     {
